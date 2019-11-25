@@ -14,7 +14,7 @@ class LazyLoadProxy(object):
         setattr(object.__getattribute__(self, "_obj_fn")(), name, value)
     def __getitem__(self, index):
         return object.__getattribute__(self, "_obj_fn")().__getitem__(index)
-    def __nonzero__(self):
+    def __bool__(self):
         return bool(object.__getattribute__(self, "_obj_fn")())
     def __str__(self):
         return str(object.__getattribute__(self, "_obj_fn")())

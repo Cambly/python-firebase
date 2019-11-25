@@ -18,7 +18,7 @@ if __name__ == '__main__':
             'created_at': datetime.datetime.now()}
 
     snapshot = firebase.post('/users', data)
-    print(snapshot['name'])
+    print((snapshot['name']))
 
     def callback_get(response):
         with open('/dev/null', 'w') as f:

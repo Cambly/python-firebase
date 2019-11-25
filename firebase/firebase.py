@@ -1,5 +1,5 @@
 try:
-    import urlparse
+    import urllib.parse
 except ImportError:
     #py3k
     from urllib import parse as urlparse
@@ -243,7 +243,7 @@ class FirebaseApplication(object):
             url = url + self.URL_SEPERATOR
         if name is None:
             name = ''
-        return '%s%s%s' % (urlparse.urljoin(self.dsn, url), name,
+        return '%s%s%s' % (urllib.parse.urljoin(self.dsn, url), name,
                            self.NAME_EXTENSION)
 
     def _authenticate(self, params, headers):

@@ -1,7 +1,7 @@
 import atexit
 
 from .async import process_pool
-from firebase import *
+from .firebase import *
 
 
 @atexit.register
