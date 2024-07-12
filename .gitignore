@@ -6,6 +6,7 @@
 # Packages
 *.egg
 *.egg-info
+*.eggs
 dist
 build
 eggs
@@ -37,3 +38,5 @@ nosetests.xml
 # PyCharm
 .idea
 
+# venv
+.venv
